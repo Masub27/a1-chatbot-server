@@ -21,7 +21,7 @@ app.post("/chat", async (req, res) => {
     if (!apiKey) return res.status(500).json({ error: "GEMINI_API_KEY is missing" });
 
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
     const prompt =
       `You are a friendly A1 German tutor.\n` +
